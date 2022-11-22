@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/njbrunner/selene-30#readme",
   "dependencies": {
-    "pug": "^3.0.2"
+    "pug": "^3.0.2",
+    "pug-cli": "^1.0.0-alpha6"
   }
 }
