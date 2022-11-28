@@ -42,14 +42,16 @@ html.h-100(lang='en')
                 input.form-control(id="phoneInput" type="tel" name="phone")
               div.mb-3.row
                 div.col.text-end
-                  input.btn-check(type="radio" name="rsvp-selection" id="attendInput" autocomplete="off")
+                  input.btn-check(type="radio" name="rsvp-selection" id="attendInput" autocomplete="off" value="true")
                   label.btn.btn-outline-success(for="attendInput") Will Attend
                 div.col.text-start
-                  input.btn-check(type="radio" name="rsvp-selection" id="notAttendInput" autocomplete="off")
+                  input.btn-check(type="radio" name="rsvp-selection" id="notAttendInput" autocomplete="off" value="false")
                   label.btn.btn-outline-danger(for="notAttendInput") Will Not Attend
           div.modal-footer.border-top-0.text-end
             button.btn.btn-secondary(type="button" onclick="submitRSVP()") Submit
 
-
-
-dfFCwfmmWNe46eif
+    div.toast-container.position-fixed.top-0.end-0.p-3
+      div.toast.align-items-center.border-0(role="alert" id="toast" aria-live="assertive" aria-atomic="true")
+        div.d-flex
+          div.toast-body This is a toast!
+          button.btn-close.me-2.m-auto.btn-close-white(type="button" data-bs-dismiss="toast" aria-label="Close")
