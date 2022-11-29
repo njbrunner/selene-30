@@ -1,0 +1,28 @@
+body {
+    background-color: #e0218a;
+}
+.card-main {
+    max-width: 800px;
+    box-shadow: 0 5px 10px rgb(0 0 0 / 0.5);
+    color: #e0218a;
+}
+.card-img-top {
+    position: absolute;
+    top: -150px;
+    left: 50%;
+    margin-left: -125px !important;
+    width: 250px !important;
+    height: 250px;
+    border: 3px solid #e0218a;
+}
+
+.btn.btn-pink {
+    color: #e0218a;
+    background: transparent;
+    border-color: #e0218a;
+}
+
+.btn.btn-pink:hover {
+    color: white;
+    background-color: #e0218a;
+}
