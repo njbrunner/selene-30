@@ -31,38 +31,38 @@ html.h-100(lang='en')
 
     div.modal.fade(id="rsvpModal" tabindex="-1" aria-labelledby="rsvpModalLabel" aria-hidden="true")
       div.modal-dialog.modal-dialog-centered
-        div.modal-content
+        div.modal-content.modal-pink
           div.modal-header.border-bottom-0
             h1.modal-title.fs-5(id="rsvpModalLabel" tabindex="-1" aria-labelledby="rsvpModalLabel" aria-hidden="true") RSVP to Selene's 30th Birthday
-            button.btn-close(type="button" data-bs-dismiss="modal" aria-label="Close")
+            button.btn-close.btn-close-white(type="button" data-bs-dismiss="modal" aria-label="Close")
           div.modal-body.text-start
-            form.needs-validation
+            form.needs-validation(id="rsvpForm")
               div.row
                 div.col.form-floating.mb-3
-                  input.form-control.needs-validation(id="firstNameInput" type="text" name="firstName" placeholder="First Name" required)
-                  label.ms-3(for="firstNameInput") First Name
-                  div.invalid-feedback Please provide your first name.
+                  input.form-control.needs-validation.input-pink(id="firstNameInput" type="text" name="firstName" placeholder="First Name" required)
+                  label.ms-3.label-pink(for="firstNameInput") First Name
+                  div.invalid-feedback.feedback-white Please provide your first name.
                 div.col.form-floating.mb-3
-                  input.form-control.needs-validation(id="lastNameInput" type="text" name="lastName" placeholder="Last Name" required)
-                  label.ms-3(for="lastNameInput") Last Name
-                  div.invalid-feedback Please provide your last name.
+                  input.form-control.needs-validation.input-pink(id="lastNameInput" type="text" name="lastName" placeholder="Last Name" required)
+                  label.ms-3.label-pink(for="lastNameInput") Last Name
+                  div.invalid-feedback.feedback-white Please provide your last name.
               div.mb-3.form-floating
-                input.form-control.needs-validation(id="phoneInput" type="tel" name="phone" placeholder="Phone" required)
-                label(for="phoneInput") Phone Number
-                div.invalid-feedback Please provide a valid phone number.
+                input.form-control.needs-validation.input-pink(id="phoneInput" type="tel" name="phone" placeholder="Phone" required)
+                label.label-pink(for="phoneInput") Phone Number
+                div.invalid-feedback.feedback-white Please provide a valid phone number.
               div.mb-3.row
                 div.col.text-end
                   input.btn-check.form-check(type="radio" name="rsvp-selection" id="attendInput" autocomplete="off" value="true" required)
-                  label.btn.btn-outline-success(for="attendInput") Will Attend
+                  label.btn.btn-pink(for="attendInput") Will Attend
                 div.col.text-start
                   input.btn-check.form-check(type="radio" name="rsvp-selection" id="notAttendInput" autocomplete="off" value="false" required)
-                  label.btn.btn-outline-danger(for="notAttendInput") Will Not Attend
-                  div.invalid-feedback Please select one of the options.
+                  label.btn.btn-pink(for="notAttendInput") Will Not Attend
+                  div.invalid-feedback.feedback-white Please select one of the options.
           div.modal-footer.border-top-0.text-end
-            button.btn.btn-secondary(type="button" onclick="submitRSVP()") Submit
+            button.btn.btn-pink(type="button" onclick="submitRSVP()") Submit
 
     div.toast-container.position-fixed.top-0.end-0.p-3
-      div.toast.align-items-center.border-0(role="alert" id="toast" aria-live="assertive" aria-atomic="true")
+      div.toast.align-items-center.border-0.toast-pink(role="alert" id="toast" aria-live="assertive" aria-atomic="true")
         div.d-flex
           div.toast-body This is a toast!
           button.btn-close.me-2.m-auto.btn-close-white(type="button" data-bs-dismiss="toast" aria-label="Close")
