@@ -20,19 +20,17 @@ function submitRSVP() {
         let modalElement = document.getElementById("rsvpModal");
         const modal = bootstrap.Modal.getInstance(modalElement);
         modal.hide();
+        resetForm();
         let toastElement = document.getElementById("toast");
-        toastElement.classList.remove("text-bg-danger");
-        toastElement.classList.add("text-bg-success");
         toastElement.querySelector(".toast-body").innerHTML = response.data;
-        const toast = new bootstrap.Toast(toastElement);
+        const toast = new bootstrap.Toast(toastElement, { autohide: false });
         toast.show();
       })
       .catch((error) => {
         let toastElement = document.getElementById("toast");
-        toastElement.classList.remove("text-bg-success");
-        toastElement.classList.add("text-bg-danger");
-        toastElement.querySelector(".toast-body").innerHTML = error.response.data;
-        const toast = new bootstrap.Toast(toastElement);
+        toastElement.querySelector(".toast-body").innerHTML =
+          error.response.data;
+        const toast = new bootstrap.Toast(toastElement, { autohide: false });
         toast.show();
       });
   }
@@ -50,4 +48,14 @@ function validate() {
   });
 
   return formValid;
+}
+
+function resetForm() {
+  let formElement = document.getElementById("rsvpForm");
+  formElement.reset();
+  const forms = document.querySelectorAll(".was-validated");
+
+  Array.from(forms).forEach((form) => {
+    form.classList.remove("was-validated");
+  });
 }
