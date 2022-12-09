@@ -12,7 +12,16 @@ body {
     box-shadow: 0 5px 10px rgb(0 0 0 / 0.5);
     color: #ffffff;
     background-color: #e0218a;
+    border-color: #e0218a;
 }
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .card-main {
+        margin-top: 150px;
+    }
+  }
+
 .card-img-top {
     position: absolute;
     top: -150px;
