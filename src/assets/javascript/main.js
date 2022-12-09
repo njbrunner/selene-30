@@ -11,6 +11,11 @@ function submitRSVP() {
         .value,
     };
 
+    let submitButton = document.getElementById("submitButton");
+    submitButton.disabled = true;
+    submitButton.innerHTML =
+      '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Submitting...';
+
     axios({
       method: "POST",
       url: "https://us-central1-selene-30.cloudfunctions.net/save-rsvp",
@@ -20,6 +25,9 @@ function submitRSVP() {
         let modalElement = document.getElementById("rsvpModal");
         const modal = bootstrap.Modal.getInstance(modalElement);
         modal.hide();
+        let submitButton = document.getElementById("submitButton");
+        submitButton.disabled = false;
+        submitButton.innerHTML = "Submit";
         resetForm();
         let toastElement = document.getElementById("toast");
         toastElement.querySelector(".toast-body").innerHTML = response.data;
@@ -32,6 +40,9 @@ function submitRSVP() {
           error.response.data;
         const toast = new bootstrap.Toast(toastElement, { autohide: false });
         toast.show();
+        let submitButton = document.getElementById("submitButton");
+        submitButton.disabled = false;
+        submitButton.innerHTML = "Submit";
       });
   }
 }
