@@ -8,6 +8,8 @@ body {
     font-family: barbieFont;
 }
 .card-main {
+    margin-top: 175px;
+    margin-bottom: 50px;
     max-width: 800px;
     box-shadow: 0 5px 10px rgb(0 0 0 / 0.5);
     color: #ffffff;
@@ -18,7 +20,8 @@ body {
 @media only screen and (max-width: 768px) {
     /* For mobile phones: */
     .card-main {
-        margin-top: 150px;
+        margin-top: 175px;
+        margin-bottom: 50px;
     }
   }
 
@@ -30,6 +33,14 @@ body {
     width: 250px !important;
     height: 250px;
     border: 3px solid #e0218a;
+}
+
+.link-no-styling {
+    color: white;
+}
+
+.link-no-styling:hover {
+    color: #f8cde5;
 }
 
 .btn.btn-pink {
@@ -98,4 +109,16 @@ body {
 .toast-pink {
     background-color: #e0218a !important;
     color: white;
+}
+
+.container-music-player {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.music-player {
+    width: 40%;
+    height: 55px;
+    margin-left: 32px;
 }
